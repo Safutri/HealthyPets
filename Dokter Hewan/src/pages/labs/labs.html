@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">  
+          <ion-title>
+              <strong>Daftar Ambulator</strong>
+            </ion-title>
+      <ion-buttons end>
+        <button ion-button tappable (click)="goToHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+        </ion-buttons> 
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="checkout-trip common-bg">
+  <div class="card round" margin-top>
+
+      <ion-list no-margin>
+        <ion-item class="primary-bg">
+            <ion-avatar item-start>
+                <img src="assets/icons/person.png">
+            </ion-avatar> 
+          <h2 ion-text class="text-white bold">Pemilik: </h2>
+          <p ion-text class="text-secondary bold">{{nama}} (No.Reg. {{no_reg}})</p>
+          <h2 ion-text class="text-white bold">Hewan: </h2>
+          <p ion-text class="text-secondary bold">{{namahewan}} ({{umur}} tahun, {{jenis}})</p>
+        </ion-item>
+      </ion-list>
+  
+      <div padding>  
+
+        <ion-card (click)="hlab(labs.id)" *ngFor="let labs of labs"> 
+            <ion-card-header>
+            <b><font color="red">Hasil Lab</font></b> (<font end color="blue">{{labs.tgl}}</font>)
+            </ion-card-header> 
+            <ion-card-content>
+                <b><p>Diagnosa</p></b>
+                <p>{{labs.diagnosa}}</p>
+            </ion-card-content>
+          </ion-card>
+      </div>
+    </div> 
+</ion-content>

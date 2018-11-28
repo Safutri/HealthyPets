@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Rekam Medik</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="checkout-trip common-bg">
+  <div class="card round" margin-top>
+
+      <ion-list no-margin>
+        <ion-item class="primary-bg">
+            <ion-avatar item-start>
+                <img src="assets/imgs/profile/d.png">
+            </ion-avatar> 
+          <h2 ion-text class="text-white bold">Pemilik: </h2>
+          <p ion-text class="text-secondary bold">No.Reg. {{no_reg}}</p>
+        </ion-item>
+      </ion-list>
+
+          <ion-item class="taliw-bg ">
+              <ion-avatar item-start>
+                  <img src="assets/imgs/hewan/buldog.jpg">
+              </ion-avatar> 
+            <h2 ion-text class="text-secondary bold">Tanggal: {{tgl}}</h2>
+            <p ion-text class="text-secondary bold">{{namahewan}} ({{jenis}} {{umur}} th)</p>
+            <p ion-text class="text-secondary bold">{{ras}} (Sex:{{gender}})</p>
+          </ion-item>
+       </div>  
+
+       <ion-card> <br>
+        <h4 class="tengah"><strong>Rekam Medik</strong></h4>
+       <ion-card-content>
+          <form [formGroup]="send" (ngSubmit)="simpan()">   
+          <ion-list>          
+              <ion-item>
+                <ion-label stacked>Status Persent</ion-label>
+                <ion-textarea type="text" required [(ngModel)]="status_awal" formControlName="status_awal" placeholder="isi disini"></ion-textarea>
+              </ion-item>
+              <ion-item>
+                <ion-label stacked>Diagnosa</ion-label>
+                <ion-textarea type="text" required [(ngModel)]="diagnosa" formControlName="diagnosa" placeholder="isi disini"></ion-textarea>
+              </ion-item>
+              <ion-item>
+                <ion-label stacked>Terapi</ion-label>
+                <ion-textarea type="text" required [(ngModel)]="terapi" formControlName="terapi" placeholder="isi disini"></ion-textarea>
+              </ion-item>
+              <ion-item>
+                <ion-label stacked>Pengobatan</ion-label>
+                <ion-textarea type="text" required [(ngModel)]="obat" formControlName="obat" placeholder="isi disini"></ion-textarea>
+              </ion-item>
+              <ion-item>
+                <ion-label stacked>Lain-lain</ion-label>
+                <ion-textarea type="text" required [(ngModel)]="lain_rm" formControlName="lain_rm" placeholder="isi disini"></ion-textarea>
+              </ion-item> 
+            <button ion-button full [disabled]="!send.valid">Simpan</button>
+          </ion-list>
+        </form>
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>
+
+ 

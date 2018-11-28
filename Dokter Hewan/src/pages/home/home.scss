@@ -1,0 +1,51 @@
+.page-home{
+      background-color: #1485b9;
+      .home {
+        ion-list {
+          border-radius: 2rem;
+          overflow: hidden;
+
+          ion-item,
+          .item:first-child,
+          .item:last-child {
+            border: none;
+          }
+
+          ion-datetime {
+            padding-left: 0;
+          }
+        }
+      }
+
+      ion-col div {
+        background-color: #f0f5ff;
+        border: 1px solid #e6e9ee;
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+      }
+
+      p {
+        padding: 10px 0 0 10px !important;
+        margin: 0;
+      } 
+    
+    .or-label-items {  
+        
+      font-size: 15px;  
+      margin-top: -1em;
+      margin-bottom: -1em;
+      color:rgb(0, 0, 0);
+      font-family: 'Lucida Grande';
+  }   
+ 
+}
+.background { 
+  background: url('../assets/img/gbr.png') no-repeat fixed center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+
+ 

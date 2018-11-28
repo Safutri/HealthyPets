@@ -1,0 +1,84 @@
+<ion-header>   
+  <ion-navbar color="primary"> 
+     <ion-title><strong>Profile</strong></ion-title>
+       <button ion-button menuToggle>
+           <ion-icon name="menu"></ion-icon>
+         </button> 
+   </ion-navbar> 
+</ion-header>
+
+<ion-content class="background">
+
+  <br><br> 
+    <div class="widget">
+          <img class="circle-pic" src="{{photoURL}}">  
+    </div>  
+  
+    <ion-card>         
+      <div class="widget">
+        <br>
+          <p><strong>{{nama}}</strong></p>   
+          <p><b>Dokter Hewan | {{nama_klinik}}</b></p>
+      </div> 
+      <ion-list>                
+        <ion-item style="color: #000000;">
+      <ion-card>
+        <ion-item>
+          <ion-list>
+          <ion-icon md="md-call"></ion-icon> 
+          {{ telp }}
+        </ion-list>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+          <ion-item>
+            <ion-list>
+            <ion-icon  md="md-mail"></ion-icon> 
+            {{ email }}
+          </ion-list>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+            <ion-item>
+              <ion-list>
+              <ion-icon md="md-pin"></ion-icon> 
+              {{ alamat }}
+            </ion-list>
+            </ion-item>
+          </ion-card>
+
+
+        <ion-card>
+            <ion-item>
+              <ion-list>
+              <ion-icon ios="ios-call" md="md-medkit"></ion-icon> 
+              {{ nama_klinik }}
+            </ion-list>
+            </ion-item>
+          </ion-card>
+          
+        <ion-card>
+            <ion-item>
+              <ion-list>
+              <ion-icon ios="ios-call" md="md-mail"></ion-icon> 
+              {{ email_klinik }}
+            </ion-list>
+            </ion-item>
+          </ion-card>  
+          
+          <ion-card>
+            <ion-item>
+              <ion-list>
+              <ion-icon ios="ios-call" md="md-key"></ion-icon> 
+              {{ no_praktik }}
+            </ion-list>
+            </ion-item>
+          </ion-card>
+
+    </ion-item>
+    </ion-list>
+
+  </ion-card> 
+</ion-content>

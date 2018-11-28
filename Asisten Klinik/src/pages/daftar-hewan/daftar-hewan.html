@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title><strong>Daftar Hewan</strong></ion-title>
+    </ion-navbar>
+</ion-header>
+ 
+<ion-content padding class="checkout-trip common-bg">
+ 
+    <div class="card round" margin-top>
+  
+      <ion-list no-margin>
+        <ion-item color="primer">
+          <ion-avatar item-start>
+            <img src="assets/icons/h.png">
+          </ion-avatar>
+          <h2 ion-text class="text-white bold">Hewan</h2> 
+        </ion-item>
+      </ion-list>
+  
+      <div padding>
+      <form [formGroup]="send" (ngSubmit)="home()">   
+          <ion-item no-padding>
+            <ion-label color="dark" stacked>Nama Hewan:</ion-label>
+            <ion-input type="text" required [(ngModel)]="nama" formControlName="nama" placeholder="nama hewan"></ion-input>
+          </ion-item>
+          <ion-item no-padding>
+            <ion-label color="dark" stacked>Tanggal Lahir:</ion-label>
+            <ion-input type="date" required [(ngModel)]="ttl" formControlName="ttl"></ion-input>
+          </ion-item>
+          <ion-item no-padding>
+            <ion-label color="dark" stacked>Umur</ion-label>
+            <ion-input type="number" required [(ngModel)]="umur" formControlName="umur" placeholder="x tahun"></ion-input>
+          </ion-item> 
+          <ion-item no-padding>
+              <ion-label color="dark" stacked>Jenis Hewan:</ion-label>
+              <ion-input type="text" required [(ngModel)]="jenis" formControlName="jenis" placeholder="Anjing/Kucing/.."></ion-input>
+          </ion-item>
+          <ion-item no-padding>           
+            <ion-label color="dark" stacked>Ras:</ion-label>
+            <ion-input type="text" required [(ngModel)]="ras" formControlName="ras" placeholder="Persia/Buldog/..."></ion-input>
+          </ion-item>
+          <ion-item no-padding>   
+              <ion-label color="dark" stacked>Gender:</ion-label>
+              <ion-select type="text" required [(ngModel)]="gender" formControlName="gender">
+                <ion-option value="female">Female</ion-option>
+                <ion-option value="male">Male</ion-option>
+              </ion-select>
+          </ion-item> 
+            <ion-item no-padding>           
+                <ion-label color="dark" stacked>Warna:</ion-label>
+                <ion-input type="text" required [(ngModel)]="warna" formControlName="warna" placeholder="hitam/coklat/..."></ion-input>
+            </ion-item> 
+          <ion-item no-padding>
+          <button ion-button full color="primer" [disabled]="!send.valid">Kirim</button> </ion-item>
+          </form>
+      </div>
+    </div>
+  </ion-content>

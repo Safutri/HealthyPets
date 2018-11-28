@@ -1,0 +1,131 @@
+<ion-header>   
+       <ion-navbar color="primary"> 
+          <ion-title><strong>Profile</strong></ion-title>
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+              </button> 
+        </ion-navbar> 
+</ion-header>
+
+<ion-content class="background">
+    <br><br> 
+    <div class="widget">
+          <img class="circle-pic" src="{{photoURL}}">  
+    </div>
+    <ion-card>    
+         
+          <div class="widget">
+            <br>
+              <p><strong>{{nama}}</strong></p>   
+              <p><b>Asisten Klinik| {{nama_klinik}}</b></p>
+          </div> 
+          <ion-list>                
+            <ion-item style="color: #000000;">
+          <ion-card>
+            <ion-item>
+              <ion-list>
+              <ion-icon md="md-call"></ion-icon> 
+              {{ telp }}
+            </ion-list>
+            </ion-item>
+          </ion-card>
+
+          <ion-card>
+              <ion-item>
+                <ion-list>
+                <ion-icon  md="md-mail"></ion-icon> 
+                {{ email }}
+              </ion-list>
+              </ion-item>
+            </ion-card>
+
+            <ion-card>
+                <ion-item>
+                  <ion-list>
+                  <ion-icon md="md-pin"></ion-icon> 
+                  {{ alamat }}
+                </ion-list>
+                </ion-item>
+              </ion-card>
+
+
+            <ion-card>
+                <ion-item>
+                  <ion-list>
+                  <ion-icon ios="ios-call" md="md-medkit"></ion-icon> 
+                  {{ nama_klinik }}
+                </ion-list>
+                </ion-item>
+              </ion-card>
+              
+            <ion-card>
+                <ion-item>
+                  <ion-list>
+                  <ion-icon ios="ios-call" md="md-mail"></ion-icon> 
+                  {{ email_klinik }}
+                </ion-list>
+                </ion-item>
+              </ion-card>
+             
+                <!-- <ion-grid class="ukurs">
+                    <ion-row> 
+                          <ion-col>
+                              <div></div>
+                            </ion-col>
+                      <ion-col>
+                        <div>Email</div>
+                        <div>Telp</div>
+                        <div>Alamat</div>
+                        <div>Klinik Hewan</div>
+                        <div>Email Klinik</div>
+                      </ion-col>
+                      <ion-col>
+                         <div>: {{ email }}</div>
+                        <div>: {{ telp }}</div>
+                        <div>: {{ alamat }}</div>
+                        <div>: {{ nama_klinik }}</div>
+                        <div>: {{ email_klinik }}</div>
+                      </ion-col> 
+                      <ion-col>
+                          <div></div>
+                        </ion-col> 
+                        <ion-col>
+                            <div></div>
+                          </ion-col> 
+                    </ion-row>           
+                  </ion-grid>
+            </ion-item> -->
+            
+              <!-- <ion-label stacked>Nama</ion-label>
+              <ion-input readonly value="{{ nama }}" style="color: #000000;"></ion-input> 
+            </ion-item>
+          
+            <ion-item>
+              <ion-label stacked>Email</ion-label>
+              <ion-input readonly value="{{ email }}" style="color: #000000;"></ion-input> 
+            </ion-item>        
+        
+          <ion-item>
+            <ion-label stacked>Telp</ion-label>
+            <ion-input readonly value="{{ telp }}" style="color: #000000;"></ion-input> 
+          </ion-item>  
+          
+          <ion-item>
+            <ion-label stacked>Alamat</ion-label>
+            <ion-input readonly value="{{ alamat }}" style="color: #000000;"></ion-input> 
+          </ion-item> 
+          
+          <ion-item>  
+            <ion-label stacked>Klinik Hewan</ion-label>
+            <ion-input readonly value="{{ nama_klinik }}" style="color: #000000;"></ion-input> 
+          </ion-item>   
+
+          <ion-item>
+            <ion-label stacked>Email Klinik</ion-label>
+            <ion-input readonly value="{{ email_klinik }}" style="color: #000000;"></ion-input> 
+          </ion-item>       -->
+        </ion-item>
+        </ion-list>
+    
+      </ion-card>
+</ion-content>

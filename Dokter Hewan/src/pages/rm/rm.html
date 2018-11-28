@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-buttons end>
+        <button ion-button tappable (click)="goToHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+        </ion-buttons>
+      <ion-title><strong>List Rekam Medik</strong></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="checkout-trip common-bg">
+    <div class="card round" margin-top>
+
+        <ion-list no-margin>
+          <ion-item class="primary-bg">
+              <ion-avatar item-start>
+                  <img src="assets/icons/h.png">
+              </ion-avatar> 
+              <h2 ion-text class="text-white bold">Hewan: </h2>
+           <h2 ion-text class="text-white bold">{{ nama }} ({{ umur }}, {{ gender }})</h2>
+            <p ion-text class="text-secondary bold">{{ jenis }}, {{ ras }}</p>
+          </ion-item>
+        </ion-list>     
+
+        <div padding>   
+          
+            <ion-card-header>
+            <b><font color="green">Konsultasi</font></b> 
+            </ion-card-header>  
+    
+          <ion-card ion-item *ngFor="let rm of rm" (click)="rekammedik(rm.id)">  
+                    <ion-icon name="pulse" item-start></ion-icon>
+                   <font color=black>Rekam Medik</font>  
+                   <p>(<font end color="blue">{{ rm.tgl }}</font>)</p>  
+            </ion-card>
+
+            <ion-card ion-item *ngFor="let rm_drh of rm_drh" (click)="rmdrh(rm_drh.id)">  
+                  <ion-icon name="pulse" item-start></ion-icon>
+                 <font color=black>Rekam Medik</font>  
+                 <p>(<font end color="blue">{{ rm_drh.tgl }}</font>)</p>  
+          </ion-card>
+          
+        </div>
+      </div>       
+
+</ion-content>

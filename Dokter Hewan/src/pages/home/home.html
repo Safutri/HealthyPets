@@ -1,0 +1,52 @@
+<ion-header no-border>
+    <ion-toolbar color="primary">     
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+          <strong>Home</strong>
+        </ion-title> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+ <!-- <ion-list>  
+        <ion-item *ngFor="let antri of antri" (click)="queue(antri.no_reg, antri.kode_hewan, antri.id)">
+                  <ion-avatar item-start>
+                      <img src="assets/icons/person.png">
+                  </ion-avatar> 
+                  <ion-card-content> 
+                    <p><b>Nama Hewan:</b>   {{ antri.nama }}</p>
+                    <p><b>No.Reg: </b>{{ antri.no_reg }}</p>
+                      <p><b>Gender: </b>{{ antri.gender }}</p>
+                      <p><b>Jenis: </b>{{ antri.jenis }}</p>
+                </ion-card-content> 
+          </ion-item>   
+</ion-list>  -->
+
+<ion-card *ngFor="let antri of antri" (click)="queue(antri.no_reg, antri.kode_hewan, antri.id)">
+  <ion-list> 
+          <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/icons/person.png">
+        </ion-avatar> 
+        <ion-card-content> 
+              <p style="color: #000000;"><b>Nama Hewan:</b>   {{ antri.nama }}</p>
+              <p style="color: #000000;"><b>No.Reg: </b>{{ antri.no_reg }}</p>
+              <p style="color: #000000;"><b>Gender: </b>{{ antri.gender }}</p>
+              <p style="color: #000000;"><b>Jenis: </b>{{ antri.jenis }}</p>
+          </ion-card-content>
+</ion-item>   
+</ion-list>  
+</ion-card>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)" [pullMin]="100" startY="80">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="dots" refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+</ion-content>

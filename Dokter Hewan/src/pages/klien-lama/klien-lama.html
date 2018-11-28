@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title><strong>Cari Klien</strong></ion-title>
+    </ion-navbar>
+ </ion-header>
+   
+<ion-content padding color="primer">
+
+    <ion-list> 
+        <ion-item *ngFor="let user of user" (click)="detail(user.id, user.no_reg)">
+      <ion-avatar item-start>
+          <img src="assets/icons/person.png">
+      </ion-avatar> 
+      <ion-card-content> 
+          <p><b>Nama Hewan:</b>   {{ user.nama }}</p>
+          <p><b>Email:</b>         {{ user.email }}</p>
+          <p><b>No.Registrasi:</b>        {{ user.no_reg }}</p>
+        </ion-card-content>
+    </ion-item>   
+    </ion-list> 
+</ion-content>

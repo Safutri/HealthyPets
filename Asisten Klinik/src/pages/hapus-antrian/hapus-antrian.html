@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar color="primary">
+    <ion-title><strong>Hapus Antrian</strong></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding> 
+    <div class="card round" margin-top>
+      
+        <div class="card round" margin-top>
+
+            <ion-list no-margin>
+              <ion-item color="primer">
+                  <ion-avatar item-start>
+                    <img src="assets/icons/person.png">
+                  </ion-avatar> 
+                <h2 ion-text class="text-white bold">{{datas.nama}}</h2>
+                <p ion-text class="text-secondary bold">Klien</p>
+              </ion-item>
+            </ion-list>  
+                    <ion-item>   
+                        <ion-grid style="color: #000000;">
+                            <ion-row>
+                              <ion-col>
+                                <div>Jenis Hewan</div>
+                                <div>Ras Hewan</div>
+                                <div>Umur Hewan</div>
+                                <div>Gender</div>
+                              </ion-col>
+                              <ion-col>
+                                <div>: {{ datas.jenis }}</div>
+                                <div>: {{ datas.ras }}</div>
+                                <div>: {{ datas.umur }} tahun</div>
+                                <div>: {{ datas.gender }}</div>
+                              </ion-col> 
+                              <ion-col>
+                                  <div></div> 
+                                </ion-col> 
+                            </ion-row>  
+                          </ion-grid> 
+
+                          <!-- <p><b>Jenis Hewan : </b>{{datas.jenis}}</p>
+                          <p><b>Ras Hewan :</b> {{datas.ras}}</p> 
+                          <p><b>Umur Hewan :</b> {{datas.umur}} tahun</p>
+                          <p><b>Gender : </b>{{datas.gender}}</p>                                 -->
+                </ion-item>  
+        </div> 
+          <button ion-button full (click)="antrian(datas.idHapus)" color="primer">Hapus Antrian</button> 
+     
+    </div>
+  </ion-content>

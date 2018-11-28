@@ -1,0 +1,154 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+      <ion-title><strong>Form Ambulator</strong></ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+   
+  <ion-content padding> 
+      <h4 class="tengah"><b>Ambulator</b></h4> 
+      <ion-card>                  
+    <ion-card-content>
+    <form [formGroup]="sends" (ngSubmit)="send()"> 
+      <ion-list>
+        <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Tanggal</ion-label>
+            <ion-input value ="{{tgl}}" required [(ngModel)]="tgl" formControlName="tgl"></ion-input>
+          </ion-item>
+        
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Sinyalemen</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="sinyalmen" formControlName="sinyalmen" placeholder="isi disini"></ion-textarea >
+          </ion-item>
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Anamnesa</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="anamnesa" formControlName="anamnesa" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+        
+            <ion-label stacked><b><font color=green>Status Persent</font></b></ion-label>
+            <ion-label stacked style="color: #ec0d0d;">1. Keadaan Umum</ion-label>
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">a. Gizi</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="gizi" formControlName="gizi" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">b. Tempramen</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="tempramen" formControlName="tempramen" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">c. Habitat</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="habitat" formControlName="habitat" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+            <ion-label stacked style="color: #ec0d0d;">2. Frekuensi Keadaan</ion-label> 
+      
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Frekuensi nafas</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="frek_nafas" formControlName="frek_nafas" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Frekuensi Pulsus</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="frek_pulsus" formControlName="frek_pulsus" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Suhu Tubuh</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="suhu_tubuh" formControlName="suhu_tubuh" placeholder="isi disini"></ion-textarea>
+          </ion-item> 
+  
+            <ion-label stacked style="color: #ec0d0d;">3. Kulit dan Bulu</ion-label> 
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Keadaan Kulit dan Bulu</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="kulit_bulu" formControlName="kulit_bulu" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+          <ion-label stacked style="color: #ec0d0d;">4. Selaput Lendir</ion-label> 
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Mata</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="sedir_mata" formControlName="sedir_mata" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Hidung</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="sedir_hidung" formControlName="sedir_hidung" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Mulut</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="sedir_mulut" formControlName="sedir_mulut" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Anus</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="sedir_anus" formControlName="sedir_anus" placeholder="isi disini"></ion-textarea>
+          </ion-item> 
+  
+            <ion-label stacked style="color: #ec0d0d;">5. Kelenjar Limfase</ion-label>
+          
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Keadaan Kelenjar Limfase</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="k_limfase" formControlName="k_limfase" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+          
+            <ion-label stacked style="color: #ec0d0d;">6. Alat Pernafasan</ion-label>
+            
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Keadaan Alat Pernafasan</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="a_nafas" formControlName="a_nafas" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+            <ion-label stacked style="color: #ec0d0d;">7. Darah</ion-label>
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Alat Peredaran Darah</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="a_darah" formControlName="a_darah" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+            <ion-label stacked style="color: #ec0d0d;">8. Pencernaan</ion-label>
+  
+           <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Alat Pencernaan</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="a_cerna" formControlName="a_cerna" placeholder="isi disini"></ion-textarea>
+          </ion-item> 
+  
+            <ion-label stacked style="color: #ec0d0d;">9. Reproduksi</ion-label>
+  
+           <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Alat Kelamin/Perkencingan</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="a_kelamin" formControlName="a_kelamin" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+          
+            <ion-label stacked style="color: #ec0d0d;">10. Saraf</ion-label>
+            
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Keadaan Urat/Saraf</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="u_saraf" formControlName="u_saraf" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+          
+            <ion-label stacked style="color: #ec0d0d;">11. Anggota Gerak</ion-label>
+            
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Keadaan Anggota Gerak</ion-label>
+            <ion-textarea type="text" required [(ngModel)]="ang_gerak" formControlName="ang_gerak" placeholder="isi disini"></ion-textarea>
+          </ion-item>
+  
+          <ion-item no-padding>
+            <ion-label stacked style="color: #040675;">Lain-lain</ion-label> 
+            <ion-textarea type="text" required [(ngModel)]="lain" formControlName="lain" placeholder="isi disini"></ion-textarea>
+          </ion-item>  
+        <button ion-button full color="primer" [disabled]="!sends.valid">Simpan</button>
+      </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  
+  </ion-content>

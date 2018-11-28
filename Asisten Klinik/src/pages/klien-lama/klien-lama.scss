@@ -1,0 +1,15 @@
+page-klien-lama {
+    .background { 
+        background: url('../assets/img/gbr.png') no-repeat fixed center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+    .widget {
+        text-align: center;
+        padding-left: 13px;
+        font-size: 16px; 
+        font-family: 'Lucida Sans Unicode', 'Lucida Grande';
+        color: rgb(0, 0, 0);
+    }  
+}

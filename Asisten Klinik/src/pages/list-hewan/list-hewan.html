@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-navbar color="primary">
+  <ion-title><strong>List Hewan</strong></ion-title>
+</ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="card round" margin-top>
+
+    <ion-list no-margin>
+      <ion-item color="primer">
+          <ion-avatar item-start>
+            <img src="assets/icons/person.png">
+          </ion-avatar> 
+          <h2 ion-text class="text-white bold">{{ datas.nama }} (No.reg: {{ datas.no_reg }})</h2>
+          <p ion-text class="text-secondary bold">Klien</p>
+      </ion-item>
+    </ion-list>  
+            <ion-item class="ukurs">  
+                <ion-grid style="color: #000000;">
+                    <ion-row>
+                      <ion-col>
+                        <div>Nama</div>
+                        <div>Email</div>
+                        <div>Telepon</div>
+                        <div>Alamat</div>
+                      </ion-col>
+                      <ion-col>
+                        <div>  :  {{ datas.nama }}</div>
+                        <div>  :  {{ datas.email }}</div>
+                        <div>:  {{ datas.telp }}</div>
+                        <div>:  {{ datas.alamat }}</div>
+                      </ion-col> 
+                      <ion-col>
+                          <div></div>
+                        </ion-col> 
+                        <ion-col>
+                            <div></div>
+                          </ion-col> 
+                      <ion-col>
+                          <div (click)="ubahPemilik()"><img src="assets/icons/pen.png"> Edit</div>
+                        </ion-col> 
+                    </ion-row>           
+                  </ion-grid> 
+        </ion-item> 
+     
+</div>
+
+<div padding>
+  <div style="color: #000000;" class="tgh">Daftar Hewan</div> 
+  <ion-card *ngFor="let dat of items" (click)="amb(dat.idHewan)">
+   <ion-item no-padding class="ukurs"> 
+      <ion-list>
+          <ion-grid style="color: #000000;">
+              <ion-row>
+                  <ion-col>
+                      <div>
+                          <ion-avatar item-start>
+                              <img src="assets/icons/h.png">
+                          </ion-avatar>  
+                      </div>
+                    </ion-col>  
+                <ion-col>
+                  <div>Nama</div>
+                  <div>Ras</div>
+                  <div>Jenis</div>
+                </ion-col>
+                <ion-col>
+                  <div>: {{ dat.namaHewan }}</div>
+                  <div>: {{ dat.ras }}</div>
+                  <div>: {{ dat.jenis }}</div>
+                </ion-col> 
+                <ion-col>
+                    <div></div>
+                  </ion-col> 
+                  <!-- <ion-col>
+                      <div></div>
+                    </ion-col>  -->
+              </ion-row>           
+            </ion-grid>
+          </ion-list>
+          </ion-item> 
+      </ion-card>
+
+</div>   
+
+      <ion-fab #fab bottom right>
+        <ion-chip (click)="tbhewan(id)">
+            <ion-label>Tambah Hewan</ion-label>
+            <ion-icon name="add-circle" color = fix></ion-icon>
+          </ion-chip>
+    </ion-fab>
+
+</ion-content>

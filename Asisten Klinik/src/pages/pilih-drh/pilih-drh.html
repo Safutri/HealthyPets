@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title><strong>Ambulator</strong></ion-title>
+  </ion-navbar>
+
+</ion-header>
+ 
+<ion-content padding class="checkout-trip common-bg">
+    <ion-card>
+        <form [formGroup]="send" (ngSubmit)="pilih()">
+        <ion-card-content>
+          <ion-list> 
+              <ion-item no-padding>     
+                <ion-label color="dark" stacked>Dokter Jaga</ion-label>
+                <ion-select type="text" [(ngModel)]="drh_jaga" formControlName="drh_jaga" required> 
+                  <ion-option *ngFor="let drh of drh" value="{{ drh.id }}"  >{{ drh.nama }}</ion-option> 
+                </ion-select> 
+            </ion-item> 
+            <button ion-button full color="primer" [disabled]="!send.valid">Selanjutnya</button>
+          </ion-list>
+  </ion-card-content>
+</form>
+</ion-card>
+
+</ion-content>

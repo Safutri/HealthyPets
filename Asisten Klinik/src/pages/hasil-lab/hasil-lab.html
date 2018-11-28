@@ -1,0 +1,171 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-buttons end>
+            <button ion-button tappable (click)="goToHome()">
+              <ion-icon name="home"></ion-icon>
+            </button>
+            </ion-buttons>
+      <ion-title>Hasil Lab</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+   
+  <ion-content padding class="checkout-trip common-bg">
+   
+    <div class="card round" margin-top>
+     <ion-list no-margin>
+              <ion-item class="primary-bg">
+                <ion-avatar item-start>
+                  <img src="assets/icons/h.png">
+              </ion-avatar> 
+                <h2 ion-text class="text-white bold">{{ datas.nama }} ({{ datas.umur }}, {{ datas.gender }})</h2>
+                <p ion-text class="text-secondary bold">{{ datas.jenis }}, {{ datas.ras }}</p>
+              </ion-item>
+            </ion-list> 
+         <div padding *ngFor="let hasil of items">
+            <br>
+           <button ion-button full (click)="labamb(hasil.idAmb)" color="tan">Ambulator</button>  
+          <br>
+          <h4 class="tengah"><strong>Hasil Laboratorium</strong></h4>
+          <ion-item>
+              <ion-label color="dark" stacked>Tanggal Anamnesa</ion-label>
+              <ion-input type="text" readonly value="{{hasil.tgl}}"></ion-input> 
+            </ion-item>
+            <ion-label><b><font color=green>1. Kulit</font></b></ion-label>         
+            <ion-item>
+              <ion-label color="dark" stacked>a. Parasit</ion-label>
+              <ion-input type="text" readonly value="{{hasil.k_parasit}}"></ion-input> 
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>b. Jamur</ion-label>
+              <ion-input type="text" readonly value="{{hasil.k_jamur}}"></ion-input>
+            </ion-item>
+           
+            <ion-label><b><font color=green>2. Feses</font></b></ion-label> 
+         
+            <ion-item>
+              <ion-label color="dark" stacked>a. Keadaan Feses</ion-label>
+              <ion-input type="text" readonly value="{{hasil.keadaan_feses}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>b. Parasit Interna</ion-label>
+              <ion-input type="text" readonly value="{{hasil.p_interna}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>c. Protozoa</ion-label>
+              <ion-input type="text" readonly value="{{hasil.protozoa}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>d. Mikroba</ion-label>
+              <ion-input type="text" readonly value="{{hasil.mikroba}}"></ion-input>
+            </ion-item>
+             
+            <ion-label><b><font color=green>3. Urin</font></b></ion-label>  
+         
+            <ion-item>
+              <ion-label color="dark" stacked>a. Warna</ion-label>
+              <ion-input type="text" readonly value="{{hasil.warna}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>b. Bau</ion-label>
+              <ion-input type="text" readonly value="{{hasil.bau}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>c. Uji Gula</ion-label>
+              <ion-input type="text" readonly value="{{hasil.uji_gula}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>d. Uji Protein</ion-label>
+              <ion-input type="text" readonly value="{{hasil.uji_protein}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>e. Uji Sedimentasi</ion-label>
+              <ion-input type="text" readonly value="{{hasil.uji_sedimentasi}}"></ion-input>
+            </ion-item>
+   
+            <ion-label><b><font color=green>4. Darah</font></b></ion-label>  
+         
+            <ion-item>
+              <ion-label color="dark" stacked>a. Warna</ion-label>
+              <ion-input type="text" readonly value="{{hasil.warna_darah}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>b. Sifat</ion-label>
+              <ion-input type="text" readonly value="{{hasil.sifat_darah}}"></ion-input>
+            </ion-item>
+             
+              <ion-label color="dark" stacked>c. Preparatif Natif</ion-label>
+        
+            <ion-item>
+               <ion-label color="dark" stacked>- Protozoa</ion-label>
+              <ion-input type="text" readonly value="{{hasil.natif_protozoa}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>- Bakteri</ion-label>
+              <ion-input type="text" readonly value="{{hasil.natif_bakteri}}"></ion-input>
+            </ion-item>
+   
+            <ion-label color="dark" stacked>d. Gambaran Darah</ion-label> 
+
+            <ion-item>
+               <ion-label color="dark" stacked>1. BDM</ion-label>
+              <ion-input type="text" readonly value="{{hasil.bdm}}"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label color="dark" stacked>2. BDP</ion-label>
+              <ion-input type="text" readonly value="{{hasil.bdp}}">BDP</ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>- Netrofil</ion-label>
+              <ion-input type="text" readonly value="{{hasil.netrofil}}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked>- Eosinofil</ion-label>
+              <ion-input type="text" readonly value="{{hasil.eosinofil}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="dark" stacked>- Basofil</ion-label>
+                <ion-input type="text" readonly value="{{hasil.basofil}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                  <ion-label color="dark" stacked>- Limfosit</ion-label>
+                  <ion-input type="text" readonly value="{{hasil.limfosit}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="dark" stacked>- Monosit</ion-label>
+                <ion-input type="text" readonly value="{{hasil.monosit}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="dark" stacked>- Stab</ion-label>
+                <ion-input type="text" readonly value="{{hasil.stab}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="dark" stacked>3. Hb</ion-label>
+                <ion-input type="text" readonly value="{{hasil.hb}}"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="dark" stacked>- Ht</ion-label>
+                <ion-input type="text" readonly value="{{hasil.ht}}"></ion-input>
+            </ion-item>
+                    
+            <ion-item>
+              <ion-label color="dark" stacked><b><font color=red>*) Diagnosa</font></b></ion-label>
+              <ion-textarea type="text" readonly value="{{hasil.diagnosa}}"></ion-textarea>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked><b><font color=red>*) Diferential Diagnosa</font></b></ion-label>
+              <ion-textarea type="text" readonly value="{{hasil.dif_diag}}"></ion-textarea>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label color="dark" stacked><b><font color=red>*) Prognosa</font></b></ion-label>
+              <ion-textarea type="text" readonly value="{{hasil.prognosa}}"></ion-textarea>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" stacked><b><font color=red>*) Terapi</font></b></ion-label>
+              <ion-textarea type="text" readonly value="{{hasil.terapi}}"></ion-textarea>
+            </ion-item>   
+      </div>
+    </div> 
+  </ion-content>

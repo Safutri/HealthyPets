@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-buttons end>
+        <button ion-button tappable (click)="goToHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+        </ion-buttons>
+      <ion-title><strong>List Hasil Laboratorium</strong></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="card round" margin-top>
+
+        <ion-list no-margin>
+          <ion-item color="primer">
+              <ion-avatar item-start>
+                  <img src="assets/icons/h.png">
+              </ion-avatar> 
+           <h2 ion-text class="text-white bold">{{ nama }} ({{ umur }}, {{ gender }})</h2>
+            <p ion-text class="text-secondary bold">{{ jenis }}, {{ ras }}</p>
+          </ion-item>
+        </ion-list> 
+
+                <ion-card (click)="labs(lab.id)" *ngFor="let lab of lab"> 
+                    <ion-card-header>
+                    <b><font color="red">Hasil Lab</font></b> (<font end color="blue">{{ lab.tgl }} </font>)
+                    </ion-card-header> 
+                    <ion-card-content>
+                        <b><p>Diagnosa</p></b>
+                        <p> {{ lab.prognosa }} </p>
+                    </ion-card-content>
+                  </ion-card>
+      </div>
+
+</ion-content>

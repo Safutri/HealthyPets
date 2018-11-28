@@ -1,0 +1,51 @@
+    <ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title><strong>Daftar Klien</strong></ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding color="primer">
+ 
+    <div class="card round" margin-top>
+  
+      <ion-list no-margin>
+        <ion-item color="primer">
+          <ion-avatar item-start>
+            <img src="assets/icons/client.png">
+          </ion-avatar>
+          <h2 ion-text class="text-white bold">Klien</h2> 
+        </ion-item>
+      </ion-list>
+  
+      <div padding> 
+        <form [formGroup]="send" (ngSubmit)="daftarhewan()">        
+                <ion-item no-padding>
+                <ion-label color="dark" stacked>Nama Pemilik:</ion-label>
+                <ion-input type="text" required [(ngModel)]="nama" formControlName="nama" placeholder="nama pemilik"></ion-input>
+                </ion-item>
+                <ion-item no-padding>
+                <ion-label color="dark" stacked>No. Identitas Pemilik (KTP/SIM):</ion-label>
+                <ion-input type="number" required [(ngModel)]="ktp" formControlName="ktp" placeholder="1991xxxxxxxxxx"></ion-input>
+                </ion-item>
+                <ion-item no-padding>
+                    <ion-label color="dark" stacked>No. Telp:</ion-label>
+                    <ion-input type="number" required [(ngModel)]="telp" formControlName="telp" placeholder="08xxxxxxxxxx"></ion-input>
+                </ion-item>
+                <ion-item no-padding>
+                    <ion-label color="dark" stacked>Alamat:</ion-label>
+                    <ion-input type="text" required [(ngModel)]="alamat" formControlName="alamat" placeholder="alamat"></ion-input>
+                </ion-item>
+                <ion-item no-padding>
+                    <ion-label color="dark" stacked>Email:</ion-label>
+                    <ion-input type="text" required [(ngModel)]="email" formControlName="email" placeholder="sample@mail.com"></ion-input>
+                </ion-item> 
+                <ion-item no-padding>
+                <button ion-button full color="primer" [disabled]="!send.valid">Simpan</button> </ion-item>   
+            </form>     
+      </div>
+    </div> 
+</ion-content>

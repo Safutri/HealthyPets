@@ -1,0 +1,157 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Hasil Lab</ion-title>
+  </ion-navbar>
+
+</ion-header>
+ 
+<ion-content padding class="checkout-trip common-bg">
+ 
+  <div class="card round" margin-top>
+ 
+
+    <div padding> 
+         <ion-label color="dark" stacked><b>1. Kulit</b></ion-label> 
+       
+          <ion-item>
+            <ion-label color="dark" stacked>a. Parasit</ion-label>
+            <ion-input type="text" required [(ngModel)]="k_parasit"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked>b. Jamur</ion-label>
+            <ion-input type="text" required [(ngModel)]="k_jamur"></ion-input>
+          </ion-item>
+                
+          <ion-label color="dark" stacked><b>2. Feses</b></ion-label> 
+       
+          <ion-item>
+            <ion-label color="dark" stacked>a. Keadaan Feses</ion-label>
+            <ion-input type="text" required [(ngModel)]="keadaan_feses"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked>b. Parasit Interna</ion-label>
+            <ion-input type="text" required [(ngModel)]="p_interna"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked>c. Protozoa</ion-label>
+            <ion-input type="text" required [(ngModel)]="protozoa"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked>d. Mikroba</ion-label>
+            <ion-input type="text" required [(ngModel)]="mikroba"></ion-input>
+          </ion-item>
+          
+          <ion-label color="dark" stacked><b>3. Urin</b></ion-label> 
+       
+          <ion-item>
+            <ion-label color="dark" stacked>a. Warna</ion-label>
+            <ion-input type="text" required [(ngModel)]="warna"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked>b. Bau</ion-label>
+            <ion-input type="text" required [(ngModel)]="bau"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked>c. Uji Gula</ion-label>
+            <ion-input type="text" required [(ngModel)]="uji_gula"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked>d. Uji Protein</ion-label>
+            <ion-input type="text" required [(ngModel)]="uji_protein"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked>e. Uji Sedimentasi</ion-label>
+            <ion-input type="text" required [(ngModel)]="uji_sedimentasi"></ion-input>
+          </ion-item>
+
+          <ion-label color="dark" stacked><b>4. Darah</b></ion-label> 
+       
+          <ion-item>
+            <ion-label color="dark" stacked>a. Warna</ion-label>
+            <ion-input type="text" required [(ngModel)]="warna_darah"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked>b. Sifat</ion-label>
+            <ion-input type="text" required [(ngModel)]="sifat_darah"></ion-input>
+          </ion-item>
+          
+            <ion-label color="dark" stacked>c. Preparatif Natif</ion-label>
+         
+          <ion-item>
+             <ion-label color="dark" stacked>- Protozoa</ion-label>
+            <ion-input type="text" required [(ngModel)]="natif_protozoa"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked>- Bakteri</ion-label>
+            <ion-input type="text" required [(ngModel)]="natif_bakteri"></ion-input>
+          </ion-item>
+
+        
+          <ion-label color="dark" stacked>d. Gambaran Darah</ion-label>
+           
+          <ion-item>
+             <ion-label color="dark" stacked>1. BDM</ion-label>
+            <ion-input type="text" required [(ngModel)]="bdm"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label color="dark" stacked>2. BDP</ion-label>
+              <ion-input type="text" required [(ngModel)]="bdp"></ion-input>
+            </ion-item> 
+
+          <ion-item>
+            <ion-label color="dark" stacked>- Netrofil</ion-label>
+            <ion-input type="text" required [(ngModel)]="netrofil"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked>- Eosinofil</ion-label>
+            <ion-input type="text" required [(ngModel)]="eosinofil"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="dark" stacked>- Basofil</ion-label>
+              <ion-input type="text" required [(ngModel)]="basofil"></ion-input>
+          </ion-item>
+          <ion-item>
+                <ion-label color="dark" stacked>- Limfosit</ion-label>
+                <ion-input type="text" required [(ngModel)]="limfosit"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="dark" stacked>- Monosit</ion-label>
+              <ion-input type="text" required [(ngModel)]="monosit"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="dark" stacked>- Stab</ion-label>
+              <ion-input type="text" required [(ngModel)]="stab"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="dark" stacked>3. Hb</ion-label>
+              <ion-input type="text" required [(ngModel)]="hb"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="dark" stacked>- Ht</ion-label>
+              <ion-input type="text" required [(ngModel)]="ht"></ion-input>
+          </ion-item>
+                  
+          <ion-item>
+            <ion-label color="dark" stacked><b>*) Diagnosa</b></ion-label>
+            <ion-input type="text" required [(ngModel)]="diagnosa"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked><b>*) Diferential Diagnosa</b></ion-label>
+            <ion-input type="text" required [(ngModel)]="dif_diag"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label color="dark" stacked><b>*) Prognosa</b></ion-label>
+            <ion-input type="text" required [(ngModel)]="prognosa"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="dark" stacked><b>*) Terapi</b></ion-label>
+            <ion-input type="text" required [(ngModel)]="terapi"></ion-input>
+          </ion-item>
+       <ion-item no-padding>
+        <button ion-button full (click)="send()" color="primer">Kirim</button> </ion-item>        
+    </div>
+  </div> 
+</ion-content>

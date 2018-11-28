@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title><strong>Update Data Klien</strong></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding color="primer">
+
+  <div class="card round" margin-top>
+
+    <ion-list no-margin>
+      <ion-item color="primer">
+        <ion-avatar item-start>
+          <img src="assets/icons/client.png">
+        </ion-avatar>
+        <h2 ion-text class="text-white bold">Klien</h2> 
+      </ion-item>
+    </ion-list>
+
+    <div padding> 
+      <ion-item no-padding>
+        <ion-label color="dark" stacked>Nama Pemilik:</ion-label>
+        <ion-input type="text" value="{{ datas.nama }}" [(ngModel)]="nama"></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+        <ion-label color="dark" stacked>No. Identitas Pemilik:</ion-label>
+        <ion-input type="number" value="{{ datas.ktp }}" [(ngModel)]="ktp"></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+          <ion-label color="dark" stacked>No. Telp:</ion-label>
+          <ion-input type="number" value="{{ datas.telp }}" [(ngModel)]="telp"></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+          <ion-label color="dark" stacked>Alamat:</ion-label>
+          <ion-input type="text" value="{{ datas.alamat }}" [(ngModel)]="alamat"></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+          <ion-label color="dark" stacked>Email:</ion-label>
+          <ion-input type="text" value="{{ datas.email}}" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+            <ion-label color="dark" stacked>No. Registrasi:</ion-label>
+            <ion-input type="number" readonly value="{{ datas.no_reg }}"></ion-input>
+      </ion-item> 
+       <ion-item no-padding>
+        <button ion-button full (click)="ubah()" color="primer">Kirim</button> </ion-item>        
+      </div>
+  </div> 
+</ion-content>

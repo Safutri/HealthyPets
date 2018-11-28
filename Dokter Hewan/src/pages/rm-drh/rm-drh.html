@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title><strong>Konsultasi Perawatan</strong></ion-title>
+  </ion-navbar>
+</ion-header> 
+<ion-content padding class="checkout-trip common-bg">
+  <div class="card round" margin-top>
+
+      <ion-list no-margin>
+        <ion-item class="primary-bg">
+            <ion-avatar item-start>
+                <img src="assets/icons/person.png">
+            </ion-avatar> 
+            <h2 ion-text class="text-white bold">Pemilik: </h2>
+            <p ion-text class="text-secondary bold">No.Reg. {{no_reg}}</p>
+        </ion-item>
+      </ion-list>
+
+          <ion-item class="taliw-bg ">
+              <ion-avatar item-start>
+                  <img src="assets/icons/h.png">
+              </ion-avatar> 
+              <h2 ion-text class="text-secondary bold">Tanggal: {{tgl}}</h2>
+              <p ion-text class="text-secondary bold">{{namahewan}} ({{jenis}} {{umur}} th)</p>
+              <p ion-text class="text-secondary bold">{{ras}} (Sex:{{gender}})</p>
+          </ion-item>
+       </div>  
+  
+  <!-- Form Rekam Medik -->
+  <ion-card> <br>
+    <h4 class="tengah"><strong>Rekam Medik</strong></h4>
+   <ion-card-content>
+      <ion-list>      
+          <ion-label stacked>Status Persent</ion-label>
+          <ion-input readonly value="{{ tgl }}"></ion-input>    
+          <ion-item>
+            <ion-label stacked>Nama Dokter Periksa</ion-label>
+            <ion-textarea type="text" readonly value="{{nama_drh}}"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Status Persent</ion-label>
+            <ion-textarea type="text" readonly value="{{status_awal}}"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Diagnosa</ion-label>
+            <ion-textarea type="text" readonly value="{{diagnosa}}"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Terapi</ion-label>
+            <ion-textarea type="text" readonly value="{{terapi}}"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Pengobatan</ion-label>
+            <ion-input type="text" readonly value="{{obat}}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Lain-lain</ion-label>
+             <ion-textarea type="text" readonly value="{{lain}}"></ion-textarea>
+          </ion-item> 
+       </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- <ion-fab right bottom>
+    <button ion-fab mini color="primer" ><ion-icon name="add"></ion-icon></button>
+  </ion-fab>  -->
+
+  <ion-fab #fab bottom right>
+    <ion-chip (click)="tbhRM()">
+        <ion-label>Tambah Rekam Medis</ion-label>
+        <ion-icon name="add-circle" color = fix></ion-icon>
+      </ion-chip>
+</ion-fab>
+
+  <div>  <button ion-button full (click)="createPdf()" color="tan">Ambulator</button></div>
+ 
+</ion-content>
+
+ 

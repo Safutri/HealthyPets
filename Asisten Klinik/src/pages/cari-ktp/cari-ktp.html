@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title><strong>Cari Klien By KTP</strong></ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content class="background">
+      <br><br>
+     <ion-card>
+         <div class="widget">
+          <ion-input [(ngModel)]="ktp" type="number" placeholder="Nomor KTP"></ion-input>  
+      </div>
+          <button ion-button full color="primer" round (click)="search(ktp)">Cari</button>
+   <br>
+              <!-- <button ion-button full (click)="search(no_reg)">Cari</button>  -->
+      </ion-card>    
+      <br>   
+              <ion-card>
+                  <ion-list> 
+                      <ion-item *ngFor="let users of users" (click)="detail(users.id)">
+                      <ion-avatar item-start>
+                          <img src="assets/icons/person.png">
+                      </ion-avatar> 
+                      <ion-card-content> 
+                          <p><b>Nama Hewan:</b>   {{ users.nama }}</p>
+                          <p><b>Email:</b>         {{ users.email }}</p>
+                          <p><b>No.Registrasi:</b>        {{ users.no_reg }}</p>
+                      </ion-card-content>
+                  </ion-item>   
+                  </ion-list> 
+              </ion-card>
+</ion-content>

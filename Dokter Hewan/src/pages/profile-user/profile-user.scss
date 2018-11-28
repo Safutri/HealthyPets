@@ -1,0 +1,54 @@
+page-profile-user {
+    .bg{ 
+        color: #000000;
+    }
+
+//     .image {
+//         height: 5vw; 
+//         width: 5vw; 
+//        border: 2px solid #fff;
+//        border-radius: 200%; 
+//        display: inline-block;
+//        margin-left: auto;
+//        margin-right: auto;
+//    }
+   
+//    .circle-pic{
+//     width:80px;
+//     height:80px; 
+// }
+.circle-pic{
+    width:120px;
+    height:120px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.textcl{
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande';
+    color: rgb(0, 0, 0);
+}
+    .widget {
+        text-align: center;
+        padding-left: 13px;
+        font-size: 16px; 
+        font-family: 'Lucida Sans Unicode', 'Lucida Grande';
+        color: rgb(0, 0, 0);
+    }  
+
+    .or-label-items {  
+        
+        font-size: 16px;  
+        margin-top: -1em;
+        margin-bottom: 1em;
+        font-family: 'Lucida Grande';
+    } 
+
+    .background { 
+        background: url('../assets/img/gbr.png') no-repeat fixed center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+}

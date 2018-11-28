@@ -1,0 +1,51 @@
+page-profile-user {
+    .bg{ 
+        color: #000000;
+    }
+    .ukurs{
+        font-size:15px;	 
+        font-family: 'Gill Sams'; 
+        margin-top: 0em;
+        margin-bottom: 0em;
+        // height: 100px;  
+    }
+      .tgh{
+        text-align: center; 
+        font-family: 'Gill Sams', 'Gill Sams MT', Baskerville Old Face, 'Trebuchet MS', sams-serif;
+      } 
+
+.circle-pic{
+    width:120px;
+    height:120px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.textcl{
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande';
+    color: rgb(0, 0, 0);
+}
+    .widget {
+        text-align: center;
+        padding-left: 13px;
+        font-size: 16px; 
+        font-family: 'Lucida Sans Unicode', 'Lucida Grande';
+        color: rgb(0, 0, 0);
+    }  
+
+    .or-label-items {  
+        
+        font-size: 16px;  
+        margin-top: -1em;
+        margin-bottom: 1em;
+        font-family: 'Lucida Grande';
+    } 
+
+    .background { 
+        background: url('../assets/img/gbr.png') no-repeat fixed center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+}

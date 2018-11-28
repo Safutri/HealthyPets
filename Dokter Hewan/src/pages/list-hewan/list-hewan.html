@@ -1,0 +1,37 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+    <ion-title><strong> Hewan</strong></ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="checkout-trip common-bg">
+    <div class="card round" margin-top>
+
+        <ion-list no-margin>
+          <ion-item class="primary-bg">
+            <ion-avatar item-start>
+              <img src="assets/icons/person.png">
+            </ion-avatar>
+            <h2 ion-text class="text-white bold">{{ nama }} (No.reg: {{ no_reg }})</h2>
+            <p ion-text class="text-secondary bold">Klien</p>
+          </ion-item>
+        </ion-list>
+    
+        <div padding>
+                  <ion-item no-padding *ngFor="let dat of hewan" (click)="listkons(dat.id, dat.kode_hewan)"> 
+                     <ion-avatar item-start>
+                        <img src="assets/icons/h.png">
+                      </ion-avatar>
+                      <ion-card-content>
+                          Data Hewan<br>
+                          <p>Nama Hewan : {{ dat.nama }} </p>
+                          <p> Ras : {{ dat.ras }}</p>
+                          <p> Jenis : {{ dat.jenis }}</p>
+                        </ion-card-content>
+          </ion-item> 
+        </div>
+      </div> 
+
+</ion-content>

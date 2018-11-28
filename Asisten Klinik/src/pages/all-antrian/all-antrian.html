@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-buttons end> 
+            <button ion-button tappable (click)="Home()">
+              <ion-icon name="home"></ion-icon>
+            </button> 
+          </ion-buttons> 
+       <ion-title>Klien Klinik</ion-title>
+    </ion-navbar>
+ </ion-header>
+   
+<ion-content padding color="primary">
+    <ion-card *ngFor="let user of items" (click)="detail(user.idKlien)"> 
+            <ion-list> 
+                    <ion-item>
+                  <ion-avatar item-start>
+                      <img src="assets/icons/person.png">
+                  </ion-avatar> 
+                      <ion-grid style="color: #000000;" class="ukurs">
+                          <ion-row>
+                            <ion-col>
+                              <div>Nama Hewan</div>
+                              <div>Email</div>
+                              <div>No. Registrasi</div>
+                            </ion-col>
+                            <ion-col>
+                              <div>: {{ user.nama }}</div>
+                              <div>: {{ user.email }}</div>
+                              <div>: {{ user.no_reg }}</div>
+                            </ion-col> 
+                          </ion-row>  
+                          <ion-col>
+                              <div></div> 
+                            </ion-col> 
+                        </ion-grid>
+          </ion-item>   
+        </ion-list>  
+    </ion-card>
+  
+        
+              <ion-fab #fab bottom right>
+                <ion-chip (click)="daftar()">
+                    <ion-label>Tambah Klien</ion-label>
+                    <ion-icon name="add-circle" color = fix></ion-icon>
+                  </ion-chip>
+            </ion-fab>
+                     
+            <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+              <ion-infinite-scroll-content></ion-infinite-scroll-content>
+            </ion-infinite-scroll>
+            
+</ion-content>

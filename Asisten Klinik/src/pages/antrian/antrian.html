@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar color="primary">
+          <ion-buttons end> 
+                  <button ion-button tappable (click)="Home()">
+                    <ion-icon name="home"></ion-icon>
+                  </button>
+                  <button ion-button tappable (click)="Search()">
+                      <ion-icon name="search"></ion-icon>
+                    </button>
+                </ion-buttons>
+       <ion-title><strong>Antrian Hari ini</strong></ion-title>
+    </ion-navbar>
+ </ion-header>
+
+  <ion-content class="ukurs">  
+  <ion-card *ngFor="let user of items" (click)="detail(user.idKlien, user.ambs)">
+    <ion-list>  
+              <ion-grid style="color: #000000;">
+                  <ion-row>
+                    <ion-col>
+                      <div>Nama Hewan</div>
+                      <div>Jenis</div>
+                      <div>Gender</div>
+                      <div>Umur</div>
+                    </ion-col>
+                    <ion-col>
+                      <div>: {{ user.nama }}</div>
+                      <div>: {{ user.jenis }}</div>
+                      <div>: {{ user.gender }}</div>
+                      <div>: {{ user.umur }} tahun</div>
+                    </ion-col> 
+                    <ion-col>
+                        <div><b>No.Reg:</b> <p style="color: #ff0000;">{{ user.no_reg }}</p></div> 
+                      </ion-col> 
+                  </ion-row>  
+                </ion-grid>            
+</ion-list>  
+</ion-card>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)" [pullMin]="100" startY="80">
+      <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="dots" refreshingText="Refreshing...">
+      </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

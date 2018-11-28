@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar color="primary">  
+            <ion-title>
+                <strong>Daftar Ambulator</strong>
+              </ion-title>
+        <ion-buttons end>
+          <button ion-button tappable (click)="goToHome()">
+            <ion-icon name="home"></ion-icon>
+          </button>
+          </ion-buttons> 
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content padding class="checkout-trip common-bg">
+    <div class="card round" margin-top>
+  
+        <ion-list no-margin>
+          <ion-item class="primary-bg">
+              <ion-avatar item-start>
+                  <img src="assets/icons/person.png">
+              </ion-avatar> 
+            <h2 ion-text class="text-white bold">Pemilik: </h2>
+            <p ion-text class="text-secondary bold">{{KlienReg.nama}} (No.Reg. {{KlienReg.no_reg}})</p>
+            <h2 ion-text class="text-white bold">Hewan: </h2>
+            <p ion-text class="text-secondary bold">{{HewanKD.namahewan}} ({{HewanKD.umur}} tahun, {{HewanKD.jenis}})</p>
+          </ion-item>
+        </ion-list>
+    
+        <div padding>   
+          <ion-card> 
+            <ion-card-header>
+            <b><font color="green">Konsultasi</font></b> (<font end color="blue">{{Ambs.tgl}}</font>)
+            </ion-card-header> 
+            <ion-card-content>
+  
+              <ion-list>
+                <button ion-item (click)="kons()">
+                  <ion-icon name="paper" item-start></ion-icon>
+                 <font color=black>Ambulator</font> 
+                </button>
+            
+                <button ion-item (click)="rm(no_reg)">
+                  <ion-icon name="pulse" item-start></ion-icon>
+                 <font color=black>Rekam Medis</font> 
+                </button>
+                </ion-list>
+  
+            </ion-card-content>
+          </ion-card>             
+        </div>
+      </div> 
+  </ion-content>

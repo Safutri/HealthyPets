@@ -1,0 +1,180 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title><strong>Konsultasi Perawatan</strong></ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content padding class="checkout-trip common-bg">
+    <div class="card round" margin-top>
+  
+        <ion-list no-margin>
+          <ion-item class="primary-bg">
+              <ion-avatar item-start>
+                  <img src="assets/icons/person.png">
+              </ion-avatar> 
+            <h2 ion-text class="text-white bold">Pemilik: </h2>
+            <p ion-text class="text-secondary bold">No.Reg. {{no_reg}}</p>
+          </ion-item>
+        </ion-list>
+  
+            <ion-item class="taliw-bg ">
+                <ion-avatar item-start>
+                    <img src="assets/icons/h.png">
+                </ion-avatar> 
+                <h2 ion-text class="text-secondary bold">Tanggal: {{tgl}}</h2>
+                <p ion-text class="text-secondary bold">{{namahewan}} ({{jenis}}, {{umur}} th)</p>
+                <p ion-text class="text-secondary bold">{{ras}} (Sex:{{gender}})</p>
+            </ion-item>
+         </div>  
+  <!-- Form Ambulator -->
+  <ion-card>
+    <br>
+      <h4 class="tengah"><strong>Ambulator</strong></h4>
+       <ion-card-content>
+        <ion-list>
+          <ion-item>
+              <ion-label stacked>Tanggal</ion-label>
+              <ion-input readonly value="{{ tgl }}"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label stacked>Sinyalemen</ion-label>
+              <ion-textarea value="{{ sinyalmen }}" type="text"></ion-textarea>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>Anamnesa</ion-label>
+              <ion-textarea value="{{ anamnesa }}" type="text"></ion-textarea>
+            </ion-item>
+    
+          
+              <ion-label stacked>Status Persent</ion-label>
+              <ion-label stacked>1. Keadaan Umum</ion-label>
+    
+            <ion-item>
+              <ion-label stacked>a. Gizi</ion-label>
+              <ion-input value="{{ gizi }}" type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>b. Tempramen</ion-label>
+              <ion-input value="{{ tempramen }}" type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>c. Habitat</ion-label>
+              <ion-input value="{{ habitat }}" type="text"></ion-input>
+            </ion-item>
+    
+              <ion-label stacked>2. Frekuensi Keadaan</ion-label> 
+        
+            <ion-item>
+              <ion-label stacked>Frekuensi nafas</ion-label>
+              <ion-input value="{{ frek_nafas }}" type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>Frekuensi Pulsus</ion-label>
+              <ion-input value="{{ frek_pulsus }}" type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>Suhu Tubuh</ion-label>
+              <ion-input value="{{ suhu_tubuh }}" type="text"></ion-input>
+            </ion-item> 
+    
+              <ion-label stacked>3. Kulit dan Bulu</ion-label> 
+    
+            <ion-item>
+              <ion-label stacked>Keadaan Kulit dan Bulu</ion-label>
+              <ion-input value="{{ kulit_bulu }}" type="text"></ion-input>
+            </ion-item>
+    
+            <ion-label stacked>4. Selaput Lendir</ion-label> 
+    
+            <ion-item>
+              <ion-label stacked>Mata</ion-label>
+              <ion-input value="{{ sedir_mata }}" type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>Hidung</ion-label>
+              <ion-input value="{{ sedir_hidung }}" type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>Mulut</ion-label>
+              <ion-input value="{{ sedir_mulut }}" type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>Anus</ion-label>
+              <ion-input value="{{ sedir_anus }}" type="text"></ion-input>
+            </ion-item> 
+    
+            <ion-label stacked>5. Kelenjar Limfase</ion-label>
+            
+            <ion-item>
+              <ion-label stacked>Keadaan Kelenjar Limfase</ion-label>
+              <ion-input value="{{ k_limfase }}" type="text"></ion-input>
+            </ion-item>
+            
+              <ion-label stacked>6. Alat Pernafasan</ion-label>
+              
+            <ion-item>
+              <ion-label stacked>Keadaan Alat Pernafasan</ion-label>
+              <ion-input value="{{ a_nafas }}" type="text"></ion-input>
+            </ion-item>
+    
+              <ion-label stacked>7. Darah</ion-label>
+    
+            <ion-item>
+              <ion-label stacked>Alat Peredaran Darah</ion-label>
+              <ion-input value="{{ a_darah }}" type="text"></ion-input>
+            </ion-item>
+    
+              <ion-label stacked>8. Pencernaan</ion-label>
+    
+             <ion-item>
+              <ion-label stacked>Alat Pencernaan</ion-label>
+              <ion-input value="{{ a_cerna }}" type="text"></ion-input>
+            </ion-item> 
+    
+              <ion-label stacked>9. Reproduksi</ion-label>
+    
+             <ion-item>
+              <ion-label stacked>Alat Kelamin/Perkencingan</ion-label>
+              <ion-input value="{{ a_kelamin }}" type="text"></ion-input>
+            </ion-item>
+            
+              <ion-label stacked>10. Saraf</ion-label>
+              
+            <ion-item>
+              <ion-label stacked>Keadaan Urat/Saraf</ion-label>
+              <ion-input value="{{ u_saraf }}" type="text"></ion-input>
+            </ion-item>
+            
+              <ion-label stacked>11. Anggota Gerak</ion-label>
+              
+            <ion-item>
+              <ion-label stacked>Keadaan Anggota Gerak</ion-label>
+              <ion-input value="{{ ang_gerak }}" type="text"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label stacked>Lain-lain</ion-label>
+              <!-- <textarea type="text"></textarea> -->
+              <ion-input value="{{ lain }}" type="text"></ion-input>
+            </ion-item> 
+            <button ion-button full (click)="createPdf()" color="tan">Download PDF</button>           
+         </ion-list>
+        </ion-card-content>
+      </ion-card>
+     
+  </ion-content>
+  
+   

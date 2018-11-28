@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <strong>Home</strong>
+    </ion-title>
+    <ion-buttons end> 
+      <button ion-button tappable (click)="goToAccount()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons> 
+  </ion-navbar> 
+</ion-header>
+ 
+      <ion-content class="card-background-page">
+        <br>
+        <ion-card (click)="antrian()">
+          <img src="assets/icons/antrian.jpg"/>
+          <div class="card-title" style="color: #000000;">Antrian Sekarang</div>
+          <div class="card-subtitle" style="color: #000000;">antrian klinik saat ini</div>
+        </ion-card> 
+ 
+        <ion-card (click)="allklien()">
+          <img src="assets/icons/Doctor.jpg"/>
+          <div class="card-title" style="color: #000000;">Klien Klinik</div>
+          <div class="card-subtitle" style="color: #000000;">klien klinik saat ini</div>
+        </ion-card>
+
+      </ion-content>
