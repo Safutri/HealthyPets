@@ -1,0 +1,8 @@
+the first application used is the clinic assistant application then the veterinary application.
+Your account in the name of SangramChavan with email sangramchavan16@gmail.com has been made by our admin.
+this application when run by you will first appear empty, 
+because the data for the clinic and client (animal owner) have not been entered. 
+we want you to use and try our application. Our application uses Indonesian so it will likely be difficult for you to use. but on the YouTube channel we have explained the stages of using our application.
+YouTube link: https://www.youtube.com/watch?v=5TRAvbB9fCI
+thanks.
+HealthyPets TEAM
